@@ -24,7 +24,7 @@
 	func RemoveSuffix( target, suffix string ) string {
 		if strings.HasSuffix( target, suffix ) {
 			lengthDifference := len( target ) - len( suffix )
-			return target[ 0: lengthDifference ]
+			return target[ : lengthDifference ]
 		}
 		return target
 	}
@@ -37,7 +37,7 @@
 	// is present
 	func RemovePrefix( target, prefix string ) string {
 		if strings.HasPrefix( target, prefix ) {
-			return target[ len( prefix ) :  ]
+			return target[ len( prefix ) : ]
 		}
 		return target
 	}
