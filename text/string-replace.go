@@ -13,6 +13,7 @@
 //
 
 	package text
+
 	import "strings"
 
 //
