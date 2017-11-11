@@ -22,8 +22,7 @@
 		// Possible line breaks are: \n \r \v \f \u0085 \u2028 \u2029
 		// but also the \r\n sequence is considered a line break
 
-    	var result  = make( [ ]rune, len( text ) )
-
+    	result := make( [ ]rune, len( text ) )
 		iterableText := [ ]rune( text )
 		previousChar := rune( 0 )
 		index := 0

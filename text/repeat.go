@@ -16,7 +16,7 @@
 
 	// Repeat contacts a string `text` to itself by the `times` specified.
 	func Repeat( text string, times int ) string {
-		var result = make( [ ]rune, len( text ) * times )
+		result := make( [ ]rune, len( text ) * times )
 		globalIndex := 0
 
 		for index := 0; index < times; index++ {
