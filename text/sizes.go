@@ -11,25 +11,18 @@
 	package text
 
 //
-// ─── MAX LINE LENGTH ────────────────────────────────────────────────────────────
+// ─── TEXT LONGEST LINE ──────────────────────────────────────────────────────────
 //
 
-	// LongestLineLength `O(n)` &mdash; returns the length of longest line
-	func LongestLineLength( text string ) int {
+	// LongestLineLength returns the length of the longest line
+	func ( text Text ) LongestLineLength( ) int {
 		max := 0
-		currentLineSize := 0
-
-		for _, char := range text {
-			if char == '\n' {
-				if ( currentLineSize > max ) {
-					max = currentLineSize
-				}
-				currentLineSize = 0
-			} else {
-				currentLineSize++
+		for _, line := range text {
+			lineLength := len( line )
+			if lineLength > max {
+				max = lineLength
 			}
 		}
-
 		return max
 	}
 
