@@ -11,6 +11,7 @@
 	package text
 
 	import "strings"
+	import "kary/core/str"
 
 //
 // ─── MULTI LINE TRIM ────────────────────────────────────────────────────────────
@@ -23,7 +24,7 @@
 
 		for index, line := range text {
 			trimmedLine := strings.TrimSpace( line )
-			spacedLine := PadRight( trimmedLine, longestLine )
+			spacedLine := str.PadRight( trimmedLine, longestLine )
 			resultingLines[ index ] = spacedLine
 		}
 
