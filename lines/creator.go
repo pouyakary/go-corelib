@@ -8,14 +8,15 @@
 // ─── SETUP ──────────────────────────────────────────────────────────────────────
 //
 
-	package text
+	package lines
 
 //
 // ─── CREATE TEXT OBJECT ─────────────────────────────────────────────────────────
 //
 
 	// Create `O(n)` &mdash; Creates a Kary Framework `Text` from plain text `string`
-	func Create( input string ) Text {
+	func Create( input string ) Lines {
+
 		result        :=  [ ]string { }
 		iterableText  :=  [ ]rune( input )
 		previousChar  :=  rune( 0 )

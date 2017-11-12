@@ -8,13 +8,17 @@
 // ─── SETUP ──────────────────────────────────────────────────────────────────────
 //
 
-	package text
+	package lines
+
+	import "strings"
 
 //
-// ─── TEXT TYPE ──────────────────────────────────────────────────────────────────
+// ─── TO STRING ──────────────────────────────────────────────────────────────────
 //
 
-	// Text is a `[ ]string` made of lines separated by `\n`
-	type Text [ ]string
+	// ToString converts a `Text` type into string
+	func ( text Lines ) ToString( ) string {
+		return strings.Join( text, "\n" )
+	}
 
 // ────────────────────────────────────────────────────────────────────────────────

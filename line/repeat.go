@@ -8,22 +8,25 @@
 // ─── SETUP ──────────────────────────────────────────────────────────────────────
 //
 
-	package text
+	package line
 
 //
-// ─── TEXT LONGEST LINE ──────────────────────────────────────────────────────────
+// ─── REPEAT TEXT ────────────────────────────────────────────────────────────────
 //
 
-	// LongestLineLength returns the length of the longest line
-	func ( text Text ) LongestLineLength( ) int {
-		max := 0
-		for _, line := range text {
-			lineLength := len( line )
-			if lineLength > max {
-				max = lineLength
+	// Repeat contacts a string `text` to itself by the `times` specified.
+	func Repeat( text string, times int ) string {
+		result := make( [ ]rune, len( text ) * times )
+		globalIndex := 0
+
+		for index := 0; index < times; index++ {
+			for _, char := range text {
+				result[ globalIndex ] = char
+				globalIndex++
 			}
 		}
-		return max
+
+		return string( result )
 	}
 
 // ────────────────────────────────────────────────────────────────────────────────

@@ -8,23 +8,23 @@
 // ─── SETUP ──────────────────────────────────────────────────────────────────────
 //
 
-	package text
+	package lines
 
 	import "strings"
-	import "kary/core/str"
+	import "kary/core/line"
 
 //
 // ─── MULTI LINE TRIM ────────────────────────────────────────────────────────────
 //
 
 	// CropToSpacedBox removes text all around the string and returns a boxed string
-	func ( text Text ) CropToSpacedBox( ) Text {
-		longestLine := text.LongestLineLength( )
+	func ( text Lines ) CropToSpacedBox( ) Lines {
+		longestLine    := text.LongestLineLength( )
 		resultingLines := make( [ ]string, len( text ) )
 
-		for index, line := range text {
-			trimmedLine := strings.TrimSpace( line )
-			spacedLine := str.PadRight( trimmedLine, longestLine )
+		for index, singleLine := range text {
+			trimmedLine := strings.TrimSpace( singleLine )
+			spacedLine  := line.PadRight( trimmedLine, longestLine )
 			resultingLines[ index ] = spacedLine
 		}
 
