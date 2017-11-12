@@ -46,29 +46,34 @@
         result         :=  make( [ ]string, boxTextHeight + 2 )
 
         for lineNumber := 0; lineNumber < boxTextHeight + 2; lineNumber++ {
-            switch lineNumber {
-            case 0:
-                result[ lineNumber ] =
-                    settings.LeftUpperCorner + line.Repeat( settings.TopExtension, boxTextWidth ) + settings.RightUpperCorner
-                break
-
-            case boxTextHeight + 1:
-                result[ lineNumber ] =
-                    settings.LeftLowerCorner + line.Repeat( settings.BottomExtension, boxTextWidth ) + settings.RightLowerCorner
-                break
-
-            case ( boxTextHeight + 2 ) / 2:
-                result[ lineNumber ] =
-                    settings.LeftMiddleExtension + spacedBoxText[ lineNumber - 1 ] + settings.RightMiddleExtension
-                break
-
-            default:
-                result[ lineNumber ] =
-                    settings.LeftExtension + spacedBoxText[ lineNumber - 1 ] + settings.RightExtension
-            }
+			result[ lineNumber ] =
+				createLine(
+					lineNumber, settings, spacedBoxText, boxTextWidth, boxTextHeight )
         }
 
         return result
     }
+
+//
+// ─── CREATE LINE ────────────────────────────────────────────────────────────────
+//
+
+	func createLine( lineNumber int, settings ShapeCharset, spacedBoxText lines.Lines, boxTextWidth, boxTextHeight int ) string {
+
+		switch lineNumber {
+		case 0:
+			return settings.LeftUpperCorner + line.Repeat( settings.TopExtension, boxTextWidth ) + settings.RightUpperCorner
+
+		case boxTextHeight + 1:
+			return settings.LeftLowerCorner + line.Repeat( settings.BottomExtension, boxTextWidth ) + settings.RightLowerCorner
+
+		case ( boxTextHeight + 2 ) / 2:
+			return  settings.LeftMiddleExtension + spacedBoxText[ lineNumber - 1 ] + settings.RightMiddleExtension
+
+
+		default:
+			return settings.LeftExtension + spacedBoxText[ lineNumber - 1 ] + settings.RightExtension
+		}
+	}
 
 // ────────────────────────────────────────────────────────────────────────────────
