@@ -8,17 +8,17 @@
 // ─── SETUP ──────────────────────────────────────────────────────────────────────
 //
 
-	package shapes
+    package shapes
 
-	import "kary/core/line"
+    import "kary/core/line"
 
 //
 // ─── CREATE LINE ────────────────────────────────────────────────────────────────
 //
 
-	// CreateLine generates a line shape with a given `width`
-	func CreateLine( width int ) string {
-		return line.Repeat( "─", width )
-	}
+    // CreateLine generates a line shape with a given `width`
+    func CreateLine( width int ) string {
+        return line.Repeat( "─", width )
+    }
 
 // ────────────────────────────────────────────────────────────────────────────────

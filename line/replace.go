@@ -12,35 +12,35 @@
 // ─── SETUP ──────────────────────────────────────────────────────────────────────
 //
 
-	package line
+    package line
 
-	import "strings"
+    import "strings"
 
 //
 // ─── REMOVE FROM END ────────────────────────────────────────────────────────────
 //
 
-	// RemoveSuffix removes a `suffix` from the end of string if that `suffix`
-	// is present
-	func RemoveSuffix( target, suffix string ) string {
-		if strings.HasSuffix( target, suffix ) {
-			lengthDifference := len( target ) - len( suffix )
-			return target[ : lengthDifference ]
-		}
-		return target
-	}
+    // RemoveSuffix removes a `suffix` from the end of string if that `suffix`
+    // is present
+    func RemoveSuffix( target, suffix string ) string {
+        if strings.HasSuffix( target, suffix ) {
+            lengthDifference := len( target ) - len( suffix )
+            return target[ : lengthDifference ]
+        }
+        return target
+    }
 
 //
 // ─── REMOVE FROM START ──────────────────────────────────────────────────────────
 //
 
-	// RemovePrefix removes a `prefix` from the end of string if that `prefix`
-	// is present
-	func RemovePrefix( target, prefix string ) string {
-		if strings.HasPrefix( target, prefix ) {
-			return target[ len( prefix ) : ]
-		}
-		return target
-	}
+    // RemovePrefix removes a `prefix` from the end of string if that `prefix`
+    // is present
+    func RemovePrefix( target, prefix string ) string {
+        if strings.HasPrefix( target, prefix ) {
+            return target[ len( prefix ) : ]
+        }
+        return target
+    }
 
 // ────────────────────────────────────────────────────────────────────────────────

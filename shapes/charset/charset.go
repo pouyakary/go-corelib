@@ -8,46 +8,46 @@
 // ─── SETUP ──────────────────────────────────────────────────────────────────────
 //
 
-	package charset
+    package charset
 
 //
 // ─── PARENTHESIS ────────────────────────────────────────────────────────────────
 //
 
-	const LeftParenthesisExtension 		= "⎜"
-	const RightParenthesisExtension 	= "⎟"
+    const LeftParenthesisExtension      = "⎜"
+    const RightParenthesisExtension     = "⎟"
 
-	const LeftParenthesisUpperHook 		= "⎛"
-	const RightParenthesisUpperHook 	= "⎞"
-	const RightParenthesisLowerHook     = "⎠"
-	const LeftParenthesisLowerHook      = "⎝"
+    const LeftParenthesisUpperHook      = "⎛"
+    const RightParenthesisUpperHook     = "⎞"
+    const RightParenthesisLowerHook     = "⎠"
+    const LeftParenthesisLowerHook      = "⎝"
 
 //
 // ─── SQUARE BRACKET ─────────────────────────────────────────────────────────────
 //
 
-	const LeftSquareBracketExtension 	= "⎢"
-	const RightSquareBracketExtension 	= "⎥"
+    const LeftSquareBracketExtension    = "⎢"
+    const RightSquareBracketExtension   = "⎥"
 
-	const LeftSquareBracketUpperCorner 	= "⎡"
-	const RightSquareBracketUpperCorner = "⎤"
-	const LeftSquareBracketLowerCorner 	= "⎣"
-	const RightSquareBracketLowerCorner = "⎦"
+    const LeftSquareBracketUpperCorner  = "⎡"
+    const RightSquareBracketUpperCorner = "⎤"
+    const LeftSquareBracketLowerCorner  = "⎣"
+    const RightSquareBracketLowerCorner = "⎦"
 
 //
 // ─── CURLEY BRACKET ─────────────────────────────────────────────────────────────
 //
 
-	const CurleyBracketExtension 		= "⎪"
+    const CurleyBracketExtension        = "⎪"
 
-	const LeftCurleyBracketUpperHook 	= "⎧"
-	const RightCurleyBracketUpperHook 	= "⎫"
-	const LeftCurleyBracketLowerHook 	= "⎩"
-	const RightCurleyBracketLowerHook 	= "⎭"
+    const LeftCurleyBracketUpperHook    = "⎧"
+    const RightCurleyBracketUpperHook   = "⎫"
+    const LeftCurleyBracketLowerHook    = "⎩"
+    const RightCurleyBracketLowerHook   = "⎭"
 
-	const LeftCurleyBracketExtension 	= "⎪"
-	const LeftCurleyBracketMiddlePiece 	= "⎨"
-	const RightCurleyBracketExtension 	= "⎪"
-	const RightCurleyBracketMiddlePiece = "⎬"
+    const LeftCurleyBracketExtension    = "⎪"
+    const LeftCurleyBracketMiddlePiece  = "⎨"
+    const RightCurleyBracketExtension   = "⎪"
+    const RightCurleyBracketMiddlePiece = "⎬"
 
 // ────────────────────────────────────────────────────────────────────────────────

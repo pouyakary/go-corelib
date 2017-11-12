@@ -8,25 +8,25 @@
 // ─── SETUP ──────────────────────────────────────────────────────────────────────
 //
 
-	package line
+    package line
 
 //
 // ─── REPEAT TEXT ────────────────────────────────────────────────────────────────
 //
 
-	// Repeat contacts a string `text` to itself by the `times` specified.
-	func Repeat( text string, times int ) string {
-		result := make( [ ]rune, len( text ) * times )
-		globalIndex := 0
+    // Repeat contacts a string `text` to itself by the `times` specified.
+    func Repeat( text string, times int ) string {
+        result := make( [ ]rune, len( text ) * times )
+        globalIndex := 0
 
-		for index := 0; index < times; index++ {
-			for _, char := range text {
-				result[ globalIndex ] = char
-				globalIndex++
-			}
-		}
+        for index := 0; index < times; index++ {
+            for _, char := range text {
+                result[ globalIndex ] = char
+                globalIndex++
+            }
+        }
 
-		return string( result )
-	}
+        return string( result )
+    }
 
 // ────────────────────────────────────────────────────────────────────────────────

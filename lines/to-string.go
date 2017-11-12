@@ -8,17 +8,17 @@
 // ─── SETUP ──────────────────────────────────────────────────────────────────────
 //
 
-	package lines
+    package lines
 
-	import "strings"
+    import "strings"
 
 //
 // ─── TO STRING ──────────────────────────────────────────────────────────────────
 //
 
-	// ToString converts a `Text` type into string
-	func ( text Lines ) ToString( ) string {
-		return strings.Join( text, "\n" )
-	}
+    // ToString converts a `Text` type into string
+    func ( text Lines ) ToString( ) string {
+        return strings.Join( text, "\n" )
+    }
 
 // ────────────────────────────────────────────────────────────────────────────────

@@ -8,22 +8,22 @@
 // ─── SETUP ──────────────────────────────────────────────────────────────────────
 //
 
-	package lines
+    package lines
 
 //
 // ─── TEXT LONGEST LINE ──────────────────────────────────────────────────────────
 //
 
-	// LongestLineLength returns the length of the longest line
-	func ( text Lines ) LongestLineLength( ) int {
-		max := 0
-		for _, singleLine := range text {
-			lineLength := len( singleLine )
-			if lineLength > max {
-				max = lineLength
-			}
-		}
-		return max
-	}
+    // LongestLineLength returns the length of the longest line
+    func ( text Lines ) LongestLineLength( ) int {
+        max := 0
+        for _, singleLine := range text {
+            lineLength := len( singleLine )
+            if lineLength > max {
+                max = lineLength
+            }
+        }
+        return max
+    }
 
 // ────────────────────────────────────────────────────────────────────────────────

@@ -8,15 +8,15 @@
 // ─── SETUP ──────────────────────────────────────────────────────────────────────
 //
 
-	package terminal
+    package terminal
 
 //
 // ─── CLEAR TERMINAL SCREEN ──────────────────────────────────────────────────────
 //
 
-	// Clear cleans the Terminal screen
-	func Clear( ) {
-		print( "\033[H\033[2J" )
-	}
+    // Clear cleans the Terminal screen
+    func Clear( ) {
+        print( "\033[H\033[2J" )
+    }
 
 // ────────────────────────────────────────────────────────────────────────────────

@@ -8,13 +8,13 @@
 // ─── SETUP ──────────────────────────────────────────────────────────────────────
 //
 
-	package lines
+    package lines
 
 //
 // ─── TEXT TYPE ──────────────────────────────────────────────────────────────────
 //
 
-	// Lines is a `[ ]string` made of lines separated by `\n`
-	type Lines [ ]string
+    // Lines is a `[ ]string` made of lines separated by `\n`
+    type Lines [ ]string
 
 // ────────────────────────────────────────────────────────────────────────────────
