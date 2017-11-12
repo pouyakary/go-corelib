@@ -43,7 +43,7 @@
         spacedBoxText  :=  input.CropToSpacedBox( )
         boxTextWidth   :=  spacedBoxText.LongestLineLength( )
         boxTextHeight  :=  len( spacedBoxText )
-        result           :=  make( [ ]string, boxTextHeight + 2 )
+        result         :=  make( [ ]string, boxTextHeight + 2 )
 
         for lineNumber := 0; lineNumber < boxTextHeight + 2; lineNumber++ {
             switch lineNumber {
