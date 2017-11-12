@@ -19,8 +19,8 @@
 
 	const LeftParenthesisUpperHook 		= "⎛"
 	const RightParenthesisUpperHook 	= "⎞"
-	const LeftParenthesisLowerHook 		= "⎠"
-	const RightParenthesisLowerHook 	= "⎝"
+	const RightParenthesisLowerHook     = "⎠"
+	const LeftParenthesisLowerHook      = "⎝"
 
 //
 // ─── SQUARE BRACKET ─────────────────────────────────────────────────────────────
@@ -45,7 +45,9 @@
 	const LeftCurleyBracketLowerHook 	= "⎩"
 	const RightCurleyBracketLowerHook 	= "⎭"
 
+	const LeftCurleyBracketExtension 	= "⎪"
 	const LeftCurleyBracketMiddlePiece 	= "⎨"
+	const RightCurleyBracketExtension 	= "⎪"
 	const RightCurleyBracketMiddlePiece = "⎬"
 
 // ────────────────────────────────────────────────────────────────────────────────
