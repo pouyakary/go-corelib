@@ -46,9 +46,9 @@
         result         :=  make( [ ]string, boxTextHeight + 2 )
 
         for lineNumber := 0; lineNumber < boxTextHeight + 2; lineNumber++ {
-			result[ lineNumber ] =
-				createLine(
-					lineNumber, settings, spacedBoxText, boxTextWidth, boxTextHeight )
+            result[ lineNumber ] =
+                createLine(
+                    lineNumber, settings, spacedBoxText, boxTextWidth, boxTextHeight )
         }
 
         return result
@@ -58,24 +58,24 @@
 // ─── CREATE LINE ────────────────────────────────────────────────────────────────
 //
 
-	func createLine( lineNumber int, settings ShapeCharset, spacedBoxText lines.Lines, boxTextWidth, boxTextHeight int ) string {
+    func createLine( lineNumber int, settings ShapeCharset, spacedBoxText lines.Lines, boxTextWidth, boxTextHeight int ) string {
 
-		middleLineNumber :=
-			( ( boxTextHeight + 2 ) / 2 ) - ( ( boxTextHeight % 2 ) + 1 )
+        middleLineNumber :=
+            ( ( boxTextHeight + 2 ) / 2 ) - ( ( boxTextHeight % 2 ) + 1 )
 
-		switch lineNumber {
-		case 0:
-			return settings.LeftUpperCorner + line.Repeat( settings.TopExtension, boxTextWidth ) + settings.RightUpperCorner
+        switch lineNumber {
+        case 0:
+            return settings.LeftUpperCorner + line.Repeat( settings.TopExtension, boxTextWidth ) + settings.RightUpperCorner
 
-		case boxTextHeight + 1:
-			return settings.LeftLowerCorner + line.Repeat( settings.BottomExtension, boxTextWidth ) + settings.RightLowerCorner
+        case boxTextHeight + 1:
+            return settings.LeftLowerCorner + line.Repeat( settings.BottomExtension, boxTextWidth ) + settings.RightLowerCorner
 
-		case middleLineNumber:
-			return  settings.LeftMiddleExtension + spacedBoxText[ lineNumber - 1 ] + settings.RightMiddleExtension
+        case middleLineNumber:
+            return  settings.LeftMiddleExtension + spacedBoxText[ lineNumber - 1 ] + settings.RightMiddleExtension
 
-		default:
-			return settings.LeftExtension + spacedBoxText[ lineNumber - 1 ] + settings.RightExtension
-		}
-	}
+        default:
+            return settings.LeftExtension + spacedBoxText[ lineNumber - 1 ] + settings.RightExtension
+        }
+    }
 
 // ────────────────────────────────────────────────────────────────────────────────
