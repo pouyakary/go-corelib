@@ -40,8 +40,8 @@
     // shape character set
     func GenerateShapeBox( input lines.Lines, settings ShapeCharset ) lines.Lines {
 
-        spacedBoxText  :=  input.CropToSpacedBox( )
-        boxTextWidth   :=  spacedBoxText.LongestLineLength( )
+        spacedBoxText  :=  lines.CropToSpacedBox( input )
+        boxTextWidth   :=  lines.LongestLineLength( spacedBoxText )
         boxTextHeight  :=  len( spacedBoxText )
         result         :=  make( [ ]string, boxTextHeight + 2 )
 

@@ -18,8 +18,8 @@
 //
 
     // CropToSpacedBox removes text all around the string and returns a boxed string
-    func ( text Lines ) CropToSpacedBox( ) Lines {
-        longestLine    := text.LongestLineLength( )
+    func CropToSpacedBox( text Lines ) Lines {
+        longestLine    := LongestLineLength( text )
         resultingLines := make( [ ]string, len( text ) )
 
         for index, singleLine := range text {

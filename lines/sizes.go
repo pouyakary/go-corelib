@@ -15,7 +15,7 @@
 //
 
     // LongestLineLength returns the length of the longest line
-    func ( text Lines ) LongestLineLength( ) int {
+    func LongestLineLength( text Lines ) int {
         max := 0
         for _, singleLine := range text {
             lineLength := len( singleLine )

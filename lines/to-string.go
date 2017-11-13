@@ -17,7 +17,7 @@
 //
 
     // ToString converts a `Text` type into string
-    func ( text Lines ) ToString( ) string {
+    func ToString( text Lines ) string {
         return strings.Join( text, "\n" )
     }
 
