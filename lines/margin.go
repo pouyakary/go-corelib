@@ -23,7 +23,7 @@
 	// ApplyMargin applies a white space margin to the given input `text`
 	func ApplyMargin( text Lines, top, right, bottom, left int ) Lines {
 		// input
-		spacedBoxText       := CropToSpacedBox( text )
+		spacedBoxText       := GetSpacedBox( text )
 
 		// sizes
 		spacedBoxTextHeight := len( spacedBoxText )
