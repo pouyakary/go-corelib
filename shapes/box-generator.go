@@ -32,15 +32,27 @@
     }
 
 //
+// ─── MARGIN ─────────────────────────────────────────────────────────────────────
+//
+
+	type Margin struct {
+		Top     int
+		Right 	int
+		Bottom  int
+		Left    int
+	}
+
+//
 // ─── GENERATOR ──────────────────────────────────────────────────────────────────
 //
 
     // GenerateShapeBox creates a shape box based on a text `input` _Lines_
     // with margins given as `verticalMargin` and `horizontalPadding` and a
     // shape character set
-    func GenerateShapeBox( input lines.Lines, settings ShapeCharset ) lines.Lines {
+    func GenerateShapeBox( input lines.Lines, settings ShapeCharset, margin Margin ) lines.Lines {
 
-        spacedBoxText  :=  lines.CropToSpacedBox( input )
+        spacedBoxText  :=  lines.ApplyMargin( input, margin.Top, margin.Right,
+											  margin.Bottom, margin.Left )
         boxTextWidth   :=  lines.LongestLineLength( spacedBoxText )
         boxTextHeight  :=  len( spacedBoxText )
         result         :=  make( [ ]string, boxTextHeight + 2 )

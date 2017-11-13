@@ -19,7 +19,7 @@
 
     // CreateParesthesis create a __Paresthesis__ box out of a given `text` and
     // margin settings.
-    func CreateParesthesis( text lines.Lines ) lines.Lines {
+    func CreateParesthesis( text lines.Lines, margin Margin ) lines.Lines {
         parenthesisCharSet := ShapeCharset{
             LeftUpperCorner:       charset.LeftParenthesisUpperHook,
             LeftLowerCorner:       charset.LeftParenthesisLowerHook,
@@ -33,7 +33,7 @@
             BottomExtension:       " ",
         }
 
-        return GenerateShapeBox( text, parenthesisCharSet )
+        return GenerateShapeBox( text, parenthesisCharSet, margin )
     }
 
 //
@@ -42,7 +42,7 @@
 
     // CreateSquareBracket create a __square bracket__ box out of a given `text`
     // and margin settings.
-    func CreateSquareBracket( text lines.Lines ) lines.Lines {
+    func CreateSquareBracket( text lines.Lines, margin Margin ) lines.Lines {
         squareBracketCharSet := ShapeCharset{
             LeftUpperCorner:       charset.LeftSquareBracketUpperCorner,
             LeftLowerCorner:       charset.LeftSquareBracketLowerCorner,
@@ -56,7 +56,7 @@
             BottomExtension:       " ",
         }
 
-        return GenerateShapeBox( text, squareBracketCharSet )
+        return GenerateShapeBox( text, squareBracketCharSet, margin )
     }
 
 //
@@ -65,7 +65,7 @@
 
     // CreateCurleyBracket create a __curley bracket__ box out of a given `text`
     // and  margin settings.
-    func CreateCurleyBracket( text lines.Lines ) lines.Lines {
+    func CreateCurleyBracket( text lines.Lines, margin Margin ) lines.Lines {
         curleyBracketCharSet := ShapeCharset{
             LeftUpperCorner:       charset.LeftCurleyBracketUpperHook,
             LeftLowerCorner:       charset.LeftCurleyBracketLowerHook,
@@ -79,7 +79,7 @@
             BottomExtension:       " ",
         }
 
-        return GenerateShapeBox( text, curleyBracketCharSet )
+        return GenerateShapeBox( text, curleyBracketCharSet, margin )
     }
 
 // ────────────────────────────────────────────────────────────────────────────────
