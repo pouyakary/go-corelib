@@ -60,6 +60,9 @@
 
 	func createLine( lineNumber int, settings ShapeCharset, spacedBoxText lines.Lines, boxTextWidth, boxTextHeight int ) string {
 
+		middleLineNumber :=
+			( ( boxTextHeight + 2 ) / 2 ) - ( ( boxTextHeight % 2 ) + 1 )
+
 		switch lineNumber {
 		case 0:
 			return settings.LeftUpperCorner + line.Repeat( settings.TopExtension, boxTextWidth ) + settings.RightUpperCorner
@@ -67,9 +70,8 @@
 		case boxTextHeight + 1:
 			return settings.LeftLowerCorner + line.Repeat( settings.BottomExtension, boxTextWidth ) + settings.RightLowerCorner
 
-		case ( boxTextHeight + 2 ) / 2:
+		case middleLineNumber:
 			return  settings.LeftMiddleExtension + spacedBoxText[ lineNumber - 1 ] + settings.RightMiddleExtension
-
 
 		default:
 			return settings.LeftExtension + spacedBoxText[ lineNumber - 1 ] + settings.RightExtension
