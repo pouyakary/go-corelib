@@ -50,4 +50,26 @@
     const RightCurleyBracketExtension   = "⎪"
     const RightCurleyBracketMiddlePiece = "⎬"
 
+//
+// ─── LIGHT BOX ──────────────────────────────────────────────────────────────────
+//
+
+	const BoxDrawingsLightHorizontal = '─'
+	const BoxDrawingsLightVertical = '│'
+	const BoxDrawingsLightDownAndRight = '┌'
+	const BoxDrawingsLightDownDownAndLeft = '┐'
+	const BoxDrawingsLightUpAndLeft = '┘'
+	const BoxDrawingsLightUpAndRight = '└'
+
+//
+// ─── HEAVY BOX ──────────────────────────────────────────────────────────────────
+//
+
+	const BoxDrawingsHeavyHorizontal = '━'
+	const BoxDrawingsHeavyVertical = '┃'
+	const BoxDrawingsHeavyDownAndRight = '┏'
+	const BoxDrawingsHeavyDownDownAndLeft = '┓'
+	const BoxDrawingsHeavyUpAndLeft = '┛'
+	const BoxDrawingsHeavyUpAndRight = '┗'
+
 // ────────────────────────────────────────────────────────────────────────────────
