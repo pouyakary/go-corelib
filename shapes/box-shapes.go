@@ -82,4 +82,50 @@
         return GenerateShapeBox( text, curleyBracketCharSet, margin )
     }
 
+//
+// ─── LIGHT BOX ──────────────────────────────────────────────────────────────────
+//
+
+	// CreateLightBox creates a __light__ box out of a given `text`
+    // and  margin settings.
+    func CreateLightBox( text lines.Lines, margin Margin ) lines.Lines {
+        curleyBracketCharSet := ShapeCharset{
+            LeftUpperCorner:       charset.BoxDrawingsLightDownAndRight,
+            LeftLowerCorner:       charset.BoxDrawingsLightUpAndRight,
+            RightUpperCorner:      charset.BoxDrawingsLightDownAndLeft,
+            RightLowerCorner:      charset.BoxDrawingsLightUpAndLeft,
+            LeftMiddleExtension:   charset.BoxDrawingsLightVertical,
+            LeftExtension:         charset.BoxDrawingsLightVertical,
+            RightMiddleExtension:  charset.BoxDrawingsLightVertical,
+            RightExtension:        charset.BoxDrawingsLightVertical,
+            TopExtension:          charset.BoxDrawingsLightHorizontal,
+            BottomExtension:       charset.BoxDrawingsLightHorizontal,
+        }
+
+        return GenerateShapeBox( text, curleyBracketCharSet, margin )
+    }
+
+//
+// ─── HEAVY BOX ──────────────────────────────────────────────────────────────────
+//
+
+	// CreateHeavyBox creates a __heavy__ box out of a given `text`
+    // and  margin settings.
+    func CreateHeavyBox( text lines.Lines, margin Margin ) lines.Lines {
+        curleyBracketCharSet := ShapeCharset{
+            LeftUpperCorner:       charset.BoxDrawingsHeavyDownAndRight,
+            LeftLowerCorner:       charset.BoxDrawingsHeavyUpAndRight,
+            RightUpperCorner:      charset.BoxDrawingsHeavyDownAndLeft,
+            RightLowerCorner:      charset.BoxDrawingsHeavyUpAndLeft,
+            LeftMiddleExtension:   charset.BoxDrawingsHeavyVertical,
+            LeftExtension:         charset.BoxDrawingsHeavyVertical,
+            RightMiddleExtension:  charset.BoxDrawingsHeavyVertical,
+            RightExtension:        charset.BoxDrawingsHeavyVertical,
+            TopExtension:          charset.BoxDrawingsHeavyHorizontal,
+            BottomExtension:       charset.BoxDrawingsHeavyHorizontal,
+        }
+
+        return GenerateShapeBox( text, curleyBracketCharSet, margin )
+    }
+
 // ────────────────────────────────────────────────────────────────────────────────
