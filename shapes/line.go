@@ -110,6 +110,57 @@
     }
 
 //
+// ─── HORIZONTAL 2D LINE ─────────────────────────────────────────────────────────
+//
+
+    // CreateHorizontalBottomLeftToUpRightLine is a line object from bottom left to
+    // top right specified by it's `width` and `height`
+    func CreateHorizontalBottomLeftToUpRightLine( width, height int ) lines.Lines {
+        // in special case of height == 1
+        if height == 1 {
+            return lines.Lines{ createHorizontalLine(
+                charset.BoxDrawingsLightHorizontal, width ) }
+        }
+
+        // in the normal case which is done within three phases: top line,
+        // middle vertical line, bottom line.
+
+        leftSize, rightSize := computeLineLeftRightSpaces( width )
+        result := make( lines.Lines, height )
+
+        // top line
+        topLineRightSide := line.Repeat( charset.BoxDrawingsLightHorizontal, rightSize )
+        topLineLeftSide  := line.Repeat( " ", leftSize )
+        topLine          := ( topLineLeftSide + charset.BoxDrawingsLightDownAndRight +
+                              topLineRightSide )
+
+        result[ 0 ] = topLine
+
+
+        // middle parts
+        middleLineLeftSide  := line.Repeat( " ", leftSize )
+        middleLineRightSize := line.Repeat( " ", rightSize )
+        middleLine          := ( middleLineLeftSide + charset.BoxDrawingsLightVertical +                           middleLineRightSize )
+
+        for index := 1; index < height - 1; index++ {
+            result[ index ] = middleLine
+        }
+
+        // ending bottom line
+        bottomLineRightSide := line.Repeat( " ", rightSize )
+        bottomLineLeftSide  := line.Repeat( charset.BoxDrawingsLightHorizontal,
+                                            leftSize )
+        bottomLine          := ( bottomLineLeftSide + charset.BoxDrawingsLightUpAndLeft +
+                                 bottomLineRightSide )
+
+        result[ height - 1 ] = bottomLine
+
+
+        // done
+        return result
+    }
+
+//
 // ──────────── COMPUTE LEFT AND RIGHT SIDE SPACES FOR THE HORIZONTAL 2D LINE ─────
 //
 
